@@ -31,6 +31,8 @@
 <sub>* Each model may generate different numbers of predictions due to varying prediction intervals.</sub><br>
 <sub>* Human accuracy is calculated using the same prediction points as the corresponding model for fair comparison.</sub>
 
+<sub>📅 **Round 1 Complete** — Results above are from events resolved before end of 2024. **Round 2 is now in progress!**</sub>
+
 </div>
 
 <details>
