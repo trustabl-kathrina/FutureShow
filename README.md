@@ -273,27 +273,82 @@ Edit `.env` with your credentials:
 # ═══════════════════════════════════════════════════════════════
 # LLM Provider API Keys (configure at least one)
 # ═══════════════════════════════════════════════════════════════
-DEEPSEEK_API_KEY=...                     # DeepSeek models
+DEEPSEEK_API_KEY="sk-xxx"                # DeepSeek models
 DEEPSEEK_BASE_URL="https://api.deepseek.com/v1"
 
-OPENROUTER_API_KEY=...                   # Access 100+ models via OpenRouter
 OPENROUTER_API_BASE="https://openrouter.ai/api/v1"
+OPENROUTER_API_KEY="sk-or-xxx"           # Access 100+ models via OpenRouter
 
-OPENAI_API_KEY=...                       # OpenAI GPT models
-OPENAI_API_BASE=...                      # Optional: custom endpoint
+OPENAI_API_BASE="https://api.openai.com/v1"  # Or custom endpoint
+OPENAI_API_KEY="sk-xxx"                  # OpenAI GPT models
+
+# Optional: Additional LLM providers
+PRIVATE_API_BASE=""                      # Custom LLM endpoint
+PRIVATE_API_KEY=""
+
+LITE_API_BASE=""                         # LiteLLM proxy endpoint
+LITE_API_KEY=""
 
 # ═══════════════════════════════════════════════════════════════
 # Search & Intelligence Tools
 # ═══════════════════════════════════════════════════════════════
-SERPER_API_KEY=...                       # Google Search via Serper.dev
-EXA_API_KEY=...                          # Exa semantic search
-RAPIDAPI_KEY=...                         # RapidAPI for additional services
+SERPER_API_KEY="xxx"                     # Google Search via Serper.dev
+EXA_API_KEY="xxx"                        # Exa semantic search
+RAPIDAPI_KEY="xxx"                       # RapidAPI for additional services
 
 # ═══════════════════════════════════════════════════════════════
-# Polymarket (optional)
+# Polymarket (optional, for trading mode)
+# See "How to Get Polymarket Credentials" below
 # ═══════════════════════════════════════════════════════════════
-POLYMARKET_API_KEY=...                   # Optional: enhanced data access
+POLYMARKET_API_KEY=""                    # API key from Polymarket
+PRIVATE_KEY=""                           # Your wallet private key
+KEY=""                                   # Same as PRIVATE_KEY
+
+# ═══════════════════════════════════════════════════════════════
+# Agent Configuration
+# ═══════════════════════════════════════════════════════════════
+AGENT_MAX_STEP=30                        # Max reasoning steps per agent
+RUNTIME_ENV_PATH=".runtime_env.json"     # Runtime state file
+DEBUG=1                                  # Debug mode (1=enabled, 0=disabled)
 ```
+
+<details>
+<summary><b>📜 How to Get Polymarket Credentials (for Trading Mode)</b></summary>
+
+> **Note:** These credentials are only required for **Live Trading Mode**. The forecasting benchmark works without them.
+
+#### Step 1: Get Your Wallet Private Key (`PRIVATE_KEY` & `KEY`)
+
+1. Create an Ethereum-compatible wallet (e.g., [MetaMask](https://metamask.io/))
+2. Fund it with MATIC on **Polygon network** for transaction fees
+3. Export your private key:
+   - MetaMask: Settings → Security & Privacy → Reveal Secret Recovery Phrase (or export private key for specific account)
+   - **⚠️ Never share your private key with anyone!**
+4. Set both `PRIVATE_KEY` and `KEY` to the same value (your wallet private key)
+
+#### Step 2: Generate Polymarket API Key (`POLYMARKET_API_KEY`)
+
+Use the provided script to generate your API credentials:
+
+```bash
+# Make sure PRIVATE_KEY is set in your .env file first
+python futureshow/utils/generate_poly_apikey.py
+```
+
+This script uses [py-clob-client](https://github.com/Polymarket/py-clob-client) to call `create_or_derive_api_creds()`, which derives your API key from your wallet signature.
+
+Alternatively, generate via Polymarket UI:
+1. Go to [Polymarket](https://polymarket.com) and connect your wallet
+2. Navigate to **Settings → API**
+3. Enable API trading and generate credentials
+
+#### Resources
+
+- [Polymarket Official Documentation](https://docs.polymarket.com/)
+- [Builder Profile & Keys Guide](https://docs.polymarket.com/developers/builders/builder-profile)
+- [py-clob-client GitHub](https://github.com/Polymarket/py-clob-client)
+
+</details>
 
 ### 3️⃣ Run Forecasting Benchmark
 
@@ -340,7 +395,9 @@ The dashboard displays:
 <details>
 <summary><b>Enable simulated trading with PnL tracking</b></summary>
 
-For advanced users who want to run live trading simulations:
+For advanced users who want to run live trading simulations.
+
+**Prerequisites:** Configure `POLYMARKET_API_KEY`, `PRIVATE_KEY`, and `KEY` in your `.env` file.
 
 ```bash
 # ─── Run Trading Agents ───
@@ -360,15 +417,6 @@ python run_pnl_trackers.py --interval 10 --config configs/default_config.json &
 # Launch trading dashboard
 python web_server.py
 # Open http://localhost:10032
-```
-
-Additional environment variables for trading:
-
-```bash
-# Polymarket trading credentials
-POLYMARKET_API_KEY=...
-PRIVATE_KEY=...                          # Wallet private key for signing
-KEY=...                                  # Additional auth key
 ```
 
 </details>

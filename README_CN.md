@@ -245,27 +245,82 @@ cp .env.example .env
 # ═══════════════════════════════════════════════════════════════
 # LLM 提供商 API 密钥（至少配置一个）
 # ═══════════════════════════════════════════════════════════════
-DEEPSEEK_API_KEY=...                     # DeepSeek 模型
+DEEPSEEK_API_KEY="sk-xxx"                # DeepSeek 模型
 DEEPSEEK_BASE_URL="https://api.deepseek.com/v1"
 
-OPENROUTER_API_KEY=...                   # 通过 OpenRouter 访问 100+ 模型
 OPENROUTER_API_BASE="https://openrouter.ai/api/v1"
+OPENROUTER_API_KEY="sk-or-xxx"           # 通过 OpenRouter 访问 100+ 模型
 
-OPENAI_API_KEY=...                       # OpenAI GPT 模型
-OPENAI_API_BASE=...                      # 可选：自定义端点
+OPENAI_API_BASE="https://api.openai.com/v1"  # 或自定义端点
+OPENAI_API_KEY="sk-xxx"                  # OpenAI GPT 模型
+
+# 可选：其他 LLM 提供商
+PRIVATE_API_BASE=""                      # 自定义 LLM 端点
+PRIVATE_API_KEY=""
+
+LITE_API_BASE=""                         # LiteLLM 代理端点
+LITE_API_KEY=""
 
 # ═══════════════════════════════════════════════════════════════
 # 搜索与情报工具
 # ═══════════════════════════════════════════════════════════════
-SERPER_API_KEY=...                       # 通过 Serper.dev 的 Google 搜索
-EXA_API_KEY=...                          # Exa 语义搜索
-RAPIDAPI_KEY=...                         # RapidAPI 附加服务
+SERPER_API_KEY="xxx"                     # 通过 Serper.dev 的 Google 搜索
+EXA_API_KEY="xxx"                        # Exa 语义搜索
+RAPIDAPI_KEY="xxx"                       # RapidAPI 附加服务
 
 # ═══════════════════════════════════════════════════════════════
-# Polymarket（可选）
+# Polymarket（可选，用于交易模式）
+# 参见下方"如何获取 Polymarket 凭证"
 # ═══════════════════════════════════════════════════════════════
-POLYMARKET_API_KEY=...                   # 可选：增强数据访问
+POLYMARKET_API_KEY=""                    # Polymarket API 密钥
+PRIVATE_KEY=""                           # 你的钱包私钥
+KEY=""                                   # 与 PRIVATE_KEY 相同
+
+# ═══════════════════════════════════════════════════════════════
+# 智能体配置
+# ═══════════════════════════════════════════════════════════════
+AGENT_MAX_STEP=30                        # 每个智能体的最大推理步数
+RUNTIME_ENV_PATH=".runtime_env.json"     # 运行时状态文件
+DEBUG=1                                  # 调试模式（1=启用，0=禁用）
 ```
+
+<details>
+<summary><b>📜 如何获取 Polymarket 凭证（交易模式）</b></summary>
+
+> **注意：** 这些凭证仅在 **实时交易模式** 下需要。预测基准测试无需这些凭证即可运行。
+
+#### 第一步：获取钱包私钥（`PRIVATE_KEY` 和 `KEY`）
+
+1. 创建一个以太坊兼容钱包（如 [MetaMask](https://metamask.io/)）
+2. 在 **Polygon 网络** 上充值 MATIC 用于支付交易费用
+3. 导出你的私钥：
+   - MetaMask：设置 → 安全与隐私 → 显示助记词（或导出特定账户的私钥）
+   - **⚠️ 切勿与任何人分享你的私钥！**
+4. 将 `PRIVATE_KEY` 和 `KEY` 设置为相同的值（你的钱包私钥）
+
+#### 第二步：生成 Polymarket API 密钥（`POLYMARKET_API_KEY`）
+
+使用项目提供的脚本生成 API 凭证：
+
+```bash
+# 确保 .env 文件中已设置 PRIVATE_KEY
+python futureshow/utils/generate_poly_apikey.py
+```
+
+该脚本使用 [py-clob-client](https://github.com/Polymarket/py-clob-client) 调用 `create_or_derive_api_creds()`，通过钱包签名派生你的 API 密钥。
+
+或者，通过 Polymarket 网页界面生成：
+1. 访问 [Polymarket](https://polymarket.com) 并连接你的钱包
+2. 进入 **Settings → API**
+3. 启用 API 交易并生成凭证
+
+#### 参考资源
+
+- [Polymarket 官方文档](https://docs.polymarket.com/)
+- [Builder Profile & Keys 指南](https://docs.polymarket.com/developers/builders/builder-profile)
+- [py-clob-client GitHub](https://github.com/Polymarket/py-clob-client)
+
+</details>
 
 ### 3️⃣ 运行预测基准测试
 
@@ -312,7 +367,9 @@ python web_server_pred.py
 <details>
 <summary><b>启用带 PnL 追踪的模拟交易</b></summary>
 
-高级用户可运行实时交易模拟：
+高级用户可运行实时交易模拟。
+
+**前置条件：** 在 `.env` 文件中配置 `POLYMARKET_API_KEY`、`PRIVATE_KEY` 和 `KEY`。
 
 ```bash
 # ─── 运行交易智能体 ───
@@ -332,15 +389,6 @@ python run_pnl_trackers.py --interval 10 --config configs/default_config.json &
 # 启动交易仪表盘
 python web_server.py
 # 打开 http://localhost:10032
-```
-
-交易所需的额外环境变量：
-
-```bash
-# Polymarket 交易凭证
-POLYMARKET_API_KEY=...
-PRIVATE_KEY=...                          # 用于签名的钱包私钥
-KEY=...                                  # 额外认证密钥
 ```
 
 </details>
