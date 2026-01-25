@@ -844,4 +844,9 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 
 **Built with curiosity by [HKUDS](https://github.com/HKUDS)**
 
+<p align="center">
+  <em> Thanks for visiting ✨ FutureShow!</em><br><br>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=HKUDS.FutureShow&style=for-the-badge&color=00d4ff" alt="Views">
+</p>
+
 </div>
