@@ -261,69 +261,117 @@ pip install -e .[dev]
 
 ### 2️⃣ API Key Configuration
 
-Create a `.env` file in the project root:
+Copy the example environment file and fill in your API keys:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your credentials:
 
 ```bash
 # ═══════════════════════════════════════════════════════════════
 # LLM Provider API Keys (configure at least one)
 # ═══════════════════════════════════════════════════════════════
-OPENAI_API_KEY=sk-...                    # For GPT-4o, GPT-5
-ANTHROPIC_API_KEY=sk-ant-...             # For Claude models
-GOOGLE_API_KEY=...                       # For Gemini models
-DEEPSEEK_API_KEY=...                     # For DeepSeek models
-OPENROUTER_API_KEY=sk-or-...             # Unified access to 100+ models
+DEEPSEEK_API_KEY=...                     # DeepSeek models
+DEEPSEEK_BASE_URL="https://api.deepseek.com/v1"
+
+OPENROUTER_API_KEY=...                   # Access 100+ models via OpenRouter
+OPENROUTER_API_BASE="https://openrouter.ai/api/v1"
+
+OPENAI_API_KEY=...                       # OpenAI GPT models
+OPENAI_API_BASE=...                      # Optional: custom endpoint
 
 # ═══════════════════════════════════════════════════════════════
 # Search & Intelligence Tools
 # ═══════════════════════════════════════════════════════════════
 SERPER_API_KEY=...                       # Google Search via Serper.dev
-JINA_API_KEY=...                         # Jina AI for URL-to-text
 EXA_API_KEY=...                          # Exa semantic search
+RAPIDAPI_KEY=...                         # RapidAPI for additional services
 
 # ═══════════════════════════════════════════════════════════════
-# Social Media APIs
-# ═══════════════════════════════════════════════════════════════
-REDDIT_CLIENT_ID=...                     # Reddit API credentials
-REDDIT_CLIENT_SECRET=...
-TWITTER_BEARER_TOKEN=...                 # X/Twitter API v2
-
-# ═══════════════════════════════════════════════════════════════
-# Polymarket (optional, for trade history)
+# Polymarket (optional)
 # ═══════════════════════════════════════════════════════════════
 POLYMARKET_API_KEY=...                   # Optional: enhanced data access
 ```
 
-### 3️⃣ Run Forecasting Agents
+### 3️⃣ Run Forecasting Benchmark
+
+Start the AI forecasting agents to predict Polymarket events:
 
 ```bash
 # ─── Single Round ───
 # Run all enabled models once on current watchlist
-python main.py configs/default_config.json
+python run_forecast_loop.py --once
 
 # ─── Continuous Loop ───
-# Run every 40 minutes with 15-min pause on overrun
+# Run predictions every 6 hours (default), refresh watchlist each round
+python run_forecast_loop.py --refresh --interval 21600
+
+# ─── Custom Configuration ───
+# Limit to 4 models, target specific month's events
+python run_forecast_loop.py \
+  --limit 4 \
+  --month 1 \
+  --year 2025 \
+  --refresh
+```
+
+### 4️⃣ Track Results & Launch Dashboard
+
+```bash
+# Start event tracker (monitors market status & prices every 30 min)
+python run_forecast_trackers.py --interval 1800 &
+
+# Launch the forecasting dashboard
+python web_server_pred.py
+# Open http://localhost:10086
+```
+
+The dashboard displays:
+- **Forecasts page**: All active/closed predictions with model votes
+- **Detail page**: Full prediction history and AI reasoning for each event
+- **Leaderboard**: Model accuracy rankings vs human baseline
+
+---
+
+### 🎰 Optional: Live Trading Mode
+
+<details>
+<summary><b>Enable simulated trading with PnL tracking</b></summary>
+
+For advanced users who want to run live trading simulations:
+
+```bash
+# ─── Run Trading Agents ───
+# Single round with trading enabled
+python main.py configs/default_config.json
+
+# Continuous trading loop (every 40 minutes)
 python run_agents_loop.py \
   --interval 2400 \
   --overrun-pause 900 \
   --config configs/default_config.json
 
-# ─── Limited Run ───
-# Process only first 4 models sequentially
-python run_agents_once.py \
-  --config configs/default_config.json \
-  --limit 4
-```
-
-### 4️⃣ Track PnL & Launch Dashboard
-
-```bash
+# ─── Track PnL & Launch Trading Dashboard ───
 # Start PnL tracking (updates every 10 seconds)
 python run_pnl_trackers.py --interval 10 --config configs/default_config.json &
 
-# Launch web dashboard
+# Launch trading dashboard
 python web_server.py
 # Open http://localhost:10032
 ```
+
+Additional environment variables for trading:
+
+```bash
+# Polymarket trading credentials
+POLYMARKET_API_KEY=...
+PRIVATE_KEY=...                          # Wallet private key for signing
+KEY=...                                  # Additional auth key
+```
+
+</details>
 
 ---
 

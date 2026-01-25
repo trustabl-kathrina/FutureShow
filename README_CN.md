@@ -233,69 +233,117 @@ pip install -e .[dev]
 
 ### 2️⃣ API 密钥配置
 
-在项目根目录创建 `.env` 文件：
+复制示例环境文件并填入你的 API 密钥：
+
+```bash
+cp .env.example .env
+```
+
+编辑 `.env` 文件：
 
 ```bash
 # ═══════════════════════════════════════════════════════════════
 # LLM 提供商 API 密钥（至少配置一个）
 # ═══════════════════════════════════════════════════════════════
-OPENAI_API_KEY=sk-...                    # GPT-4o, GPT-5
-ANTHROPIC_API_KEY=sk-ant-...             # Claude 模型
-GOOGLE_API_KEY=...                       # Gemini 模型
 DEEPSEEK_API_KEY=...                     # DeepSeek 模型
-OPENROUTER_API_KEY=sk-or-...             # 统一访问 100+ 模型
+DEEPSEEK_BASE_URL="https://api.deepseek.com/v1"
+
+OPENROUTER_API_KEY=...                   # 通过 OpenRouter 访问 100+ 模型
+OPENROUTER_API_BASE="https://openrouter.ai/api/v1"
+
+OPENAI_API_KEY=...                       # OpenAI GPT 模型
+OPENAI_API_BASE=...                      # 可选：自定义端点
 
 # ═══════════════════════════════════════════════════════════════
 # 搜索与情报工具
 # ═══════════════════════════════════════════════════════════════
 SERPER_API_KEY=...                       # 通过 Serper.dev 的 Google 搜索
-JINA_API_KEY=...                         # Jina AI URL 转文本
 EXA_API_KEY=...                          # Exa 语义搜索
+RAPIDAPI_KEY=...                         # RapidAPI 附加服务
 
 # ═══════════════════════════════════════════════════════════════
-# 社交媒体 API
-# ═══════════════════════════════════════════════════════════════
-REDDIT_CLIENT_ID=...                     # Reddit API 凭证
-REDDIT_CLIENT_SECRET=...
-TWITTER_BEARER_TOKEN=...                 # X/Twitter API v2
-
-# ═══════════════════════════════════════════════════════════════
-# Polymarket（可选，用于交易历史）
+# Polymarket（可选）
 # ═══════════════════════════════════════════════════════════════
 POLYMARKET_API_KEY=...                   # 可选：增强数据访问
 ```
 
-### 3️⃣ 运行预测智能体
+### 3️⃣ 运行预测基准测试
+
+启动 AI 预测智能体对 Polymarket 事件进行预测：
 
 ```bash
 # ─── 单轮运行 ───
 # 对当前监控列表运行所有启用的模型一次
-python main.py configs/default_config.json
+python run_forecast_loop.py --once
 
 # ─── 持续循环 ───
-# 每 40 分钟运行一次，超时暂停 15 分钟
+# 每 6 小时运行一次预测（默认），每轮刷新监控列表
+python run_forecast_loop.py --refresh --interval 21600
+
+# ─── 自定义配置 ───
+# 限制使用 4 个模型，指定目标月份的事件
+python run_forecast_loop.py \
+  --limit 4 \
+  --month 1 \
+  --year 2025 \
+  --refresh
+```
+
+### 4️⃣ 追踪结果并启动仪表盘
+
+```bash
+# 启动事件追踪器（每 30 分钟监控市场状态和价格）
+python run_forecast_trackers.py --interval 1800 &
+
+# 启动预测仪表盘
+python web_server_pred.py
+# 打开 http://localhost:10086
+```
+
+仪表盘展示：
+- **预测页面**：所有进行中/已结束的预测及模型投票
+- **详情页面**：每个事件的完整预测历史和 AI 推理过程
+- **排行榜**：模型准确率排名及与人类基准的对比
+
+---
+
+### 🎰 可选：实时交易模式
+
+<details>
+<summary><b>启用带 PnL 追踪的模拟交易</b></summary>
+
+高级用户可运行实时交易模拟：
+
+```bash
+# ─── 运行交易智能体 ───
+# 启用交易的单轮运行
+python main.py configs/default_config.json
+
+# 持续交易循环（每 40 分钟）
 python run_agents_loop.py \
   --interval 2400 \
   --overrun-pause 900 \
   --config configs/default_config.json
 
-# ─── 限量运行 ───
-# 仅按顺序处理前 4 个模型
-python run_agents_once.py \
-  --config configs/default_config.json \
-  --limit 4
-```
-
-### 4️⃣ 追踪 PnL 并启动仪表盘
-
-```bash
+# ─── 追踪 PnL 并启动交易仪表盘 ───
 # 启动 PnL 追踪（每 10 秒更新）
 python run_pnl_trackers.py --interval 10 --config configs/default_config.json &
 
-# 启动 Web 仪表盘
+# 启动交易仪表盘
 python web_server.py
 # 打开 http://localhost:10032
 ```
+
+交易所需的额外环境变量：
+
+```bash
+# Polymarket 交易凭证
+POLYMARKET_API_KEY=...
+PRIVATE_KEY=...                          # 用于签名的钱包私钥
+KEY=...                                  # 额外认证密钥
+```
+
+</details>
 
 ---
 
