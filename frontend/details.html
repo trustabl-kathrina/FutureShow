@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FutureShow Live · Event</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="predictions.css?v=detail-1" />
+  <link rel="stylesheet" href="details.css?v=detail-2" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <div class="app-container">
+    <header class="header">
+      <div class="header-left">
+        <div class="brand">
+          <span class="brand-icon">◈</span>
+          <span class="brand-text">FutureShow</span>
+          <span class="brand-tag">LIVE</span>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="predictions.html" class="nav-link active">Forecasts</a>
+        <a href="predictions.html?view=leaderboard" class="nav-link">Leaderboard</a>
+        <a href="https://github.com" target="_blank" class="nav-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          GitHub
+        </a>
+      </nav>
+      <div class="header-right">
+        <button id="backButton" class="back-button">← Back to List</button>
+      </div>
+    </header>
+
+    <main class="main-content detail-main">
+      <div id="detailError" class="empty-state hidden"></div>
+      <div id="detailContent" class="detail-content">
+        <div class="detail-header">
+          <div class="detail-header-left">
+            <div class="detail-title" id="detailTitle">Loading...</div>
+            <div class="meta-sub" id="detailSlug"></div>
+            <div id="groundTruthBanner" class="ground-truth-banner hidden">
+              <span class="truth-icon">✓</span>
+              <span class="truth-label">CORRECT ANSWER:</span>
+              <span class="truth-value" id="groundTruthValue"></span>
+            </div>
+          </div>
+          <div class="detail-meta-grid" id="detailMeta"></div>
+        </div>
+
+        <section id="chartsSection" class="chart-section hidden">
+          <div class="section-title">Market Analysis</div>
+          <div class="charts-row">
+            <div class="chart-line">
+              <div class="chart-subtitle">Price History</div>
+              <div class="chart-container">
+                <canvas id="priceChart"></canvas>
+              </div>
+            </div>
+            <div class="chart-bar">
+              <div class="chart-subtitle">Prediction Distribution</div>
+              <div class="chart-container">
+                <canvas id="distributionChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="latest-section">
+          <div class="section-title">Latest Model Predictions</div>
+          <div class="model-grid" id="latestModels"></div>
+        </section>
+
+        <section class="history-section">
+          <div class="section-title">Prediction History</div>
+          <div id="historyList" class="history-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <span class="footer-version">v0.1.0</span>
+      </div>
+      <div class="footer-center">
+        <span class="footer-status">
+          <span class="status-dot"></span>
+          System operational
+        </span>
+      </div>
+      <div class="footer-right"></div>
+    </footer>
+  </div>
+
+  <div id="detailLoader" class="loading-overlay">
+    <div class="loading-spinner">
+      <div class="spinner-ring"></div>
+      <div class="spinner-text">Loading details...</div>
+    </div>
+  </div>
+
+  <script src="details.js?v=detail-1"></script>
+</body>
+</html>

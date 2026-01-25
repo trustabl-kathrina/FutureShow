@@ -1,0 +1,241 @@
+[
+  {
+    "slug": "taylor-swift-x-travis-kelce-get-married-by",
+    "title": "Taylor Swift x Travis Kelce get married by...?",
+    "description": "This market will resolve to \"Yes\" if Taylor Swift and Travis Kelce's marriage takes place by the listed date. Otherwise, this market will resole to \"No\".\n\nThe primary resolution source for this market will be information from Travis Kelce and Taylor Swift, however a consensus of credible reporting will also be used.",
+    "category": null,
+    "endDate": "2025-12-31T00:00:00+00:00",
+    "volumeScore": 0.0,
+    "markets": [
+      {
+        "slug": "taylor-swift-x-travis-kelce-get-married-by-december-31",
+        "question": "Taylor Swift x Travis Kelce get married by December 31?",
+        "description": "This market will resolve to \"Yes\" if Travis Kelce and Taylor Swift's marriage takes place by December 31, 2025, 11:59 PM. Otherwise, this market will resole to \"No\".\n\nThe primary resolution source for this market will be information from Travis Kelce and Taylor Swift, however a consensus of credible reporting will also be used.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.017,
+        "bestAsk": 0.026,
+        "liquidity": 8703.30026,
+        "volume24h": null,
+        "closed": false
+      }
+    ]
+  },
+  {
+    "slug": "israel-strike-on-damascus-by-september-30",
+    "title": "Israel strike on Damascus by...?",
+    "description": "This market will resolve to \"Yes\" if Israel initiates a drone, missile, or air strike on Damascus Governorate, or any target within it, between September 1, 7:20 PM ET, and September 30, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA qualifying \"strike\" is defined as the use of aerial bombs, drones or missiles (including cruise or ballistic missiles) launched by Israeli military forces that impact within Damascus Governorate.\n\nMissiles or drones which are intercepted and surface-to-air missile strikes will not be sufficient for a \"Yes\" resolution regardless of whether they land in Damascus Governorate, or cause damage.\n\nThe primary resolution source for this market will be a consensus of credible reporting and video evidence. If there is ambiguity over whether a strike occurred, or whether the drone/missile was intercepted, this market will resolve based on whatever is most likely according to a consensus of credible reporting and video evidence.",
+    "category": null,
+    "endDate": "2025-12-31T00:00:00+00:00",
+    "volumeScore": 0.0,
+    "markets": [
+      {
+        "slug": "israel-strike-on-damascus-by-december-31",
+        "question": "Israel strike on Damascus by December 31?",
+        "description": "This market will resolve to \"Yes\" if Israel initiates a drone, missile, or air strike on Damascus Governorate, or any target within it, between October 7, 4:35 PM ET, and December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA qualifying \"strike\" is defined as the use of aerial bombs, drones or missiles (including cruise or ballistic missiles) launched by Israeli military forces that impact within Damascus Governorate.\n\nMissiles or drones which are intercepted and surface-to-air missile strikes will not be sufficient for a \"Yes\" resolution regardless of whether they land in Damascus Governorate, or cause damage.\n\nThe primary resolution source for this market will be a consensus of credible reporting and video evidence. If there is ambiguity over whether a strike occurred, or whether the drone/missile was intercepted, this market will resolve based on whatever is most likely according to a consensus of credible reporting and video evidence.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.07,
+        "bestAsk": 0.22,
+        "liquidity": 256.207,
+        "volume24h": null,
+        "closed": false
+      }
+    ]
+  },
+  {
+    "slug": "sam-altman-in-jail-by",
+    "title": "Sam Altman in jail by...?",
+    "description": "This market will resolve to \"Yes\" if the referenced Sam Altman serves any time in a federal, state, or local U.S. jail or prison by the listed date (ET). Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the U.S. Government, however a consensus of credible reporting may also be used.",
+    "category": null,
+    "endDate": "2025-12-31T00:00:00+00:00",
+    "volumeScore": 0.0,
+    "markets": [
+      {
+        "slug": "sam-altman-in-jail-by-december-31",
+        "question": "Sam Altman in jail by December 31?",
+        "description": "This market will resolve to \"Yes\" if Sam Altman serves any time in a federal, state, or local U.S. jail or prison by the listed date (ET). Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the U.S. Government, however a consensus of credible reporting may also be used.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.01,
+        "bestAsk": 0.016,
+        "liquidity": 1772.41567,
+        "volume24h": null,
+        "closed": false
+      },
+      {
+        "slug": "sam-altman-in-jail-by-june-30",
+        "question": "Sam Altman in jail by June 30?",
+        "description": "This market will resolve to \"Yes\" if Sam Altman serves any time in a federal, state, or local U.S. jail or prison by the listed date (ET). Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the U.S. Government, however a consensus of credible reporting may also be used.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.04,
+        "bestAsk": 0.059,
+        "liquidity": 3962.13962,
+        "volume24h": null,
+        "closed": false
+      }
+    ]
+  },
+  {
+    "slug": "aziz-akhannouch-out-as-morocco-prime-minister-by-december-31",
+    "title": "Aziz Akhannouch out as Morocco Prime Minister by December 31?",
+    "description": "This market will resolve to \"Yes\" if the Prime Minister of the Morocco Aziz Akhannouch is removed from power for any length of time between October 2, and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nAziz Akhannouch will be considered to be removed from power if he resigns, is detained, or otherwise loses his position or is prevented from fulfilling his duties as Prime Minister of Morocco within this market's timeframe.\n\nThe primary resolution source for this market will be a consensus of credible reporting.",
+    "category": null,
+    "endDate": "2025-12-31T00:00:00+00:00",
+    "volumeScore": 0.0,
+    "markets": [
+      {
+        "slug": "aziz-akhannouch-out-as-morocco-prime-minister-by-december-31",
+        "question": "Aziz Akhannouch out as Morocco Prime Minister by December 31?",
+        "description": "This market will resolve to \"Yes\" if the Prime Minister of the Morocco Aziz Akhannouch is removed from power for any length of time between October 2, and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nAziz Akhannouch will be considered to be removed from power if he resigns, is detained, or otherwise loses his position or is prevented from fulfilling his duties as Prime Minister of Morocco within this market's timeframe.\n\nThe primary resolution source for this market will be a consensus of credible reporting.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.06,
+        "bestAsk": 0.08,
+        "liquidity": 3218.9289,
+        "volume24h": null,
+        "closed": false
+      }
+    ]
+  },
+  {
+    "slug": "epstein-client-list-released-in-2025-372",
+    "title": "Epstein client list released in 2025?",
+    "description": "This market will resolve to “Yes” if files which were not previously public and which pertain to the illegal activities of Jeffrey Epstein are made public by December 31, 2025, 11:59 PM ET, and those files contain a list of individuals associated with Epstein in connection with his illegal activities, including but not limited to sex trafficking or related crimes. Otherwise, this market will resolve to “No.”\n\nTo qualify, the files must contain names in a context equivalent to what is commonly referred to as Epstein’s “client list”—that is, a document that explicitly identifies a list or set of individuals as being directly connected to, participating in, facilitating, funding, soliciting, or otherwise being implicated in Jeffrey Epstein’s illegal activities.\n\nA document may qualify even if it does not contain explicit incriminating language on its face, so long as credible reporting or accompanying official context confirms that the released document is an incriminating client list or functionally equivalent roster of individuals tied to Epstein’s illegal activity.\n\nThe following will not qualify:\n\n- Flight logs, passenger manifests, visitor logs, or transportation records which merely show individuals traveling with, meeting with, or visiting Epstein without any explicit or contextual tie to criminal activity.\n\n- Contact books, address lists, social calendars, guest lists, schedules, correspondence logs, or similar documents that include names solely due to social contact, proximity, acquaintance, or logistical interaction with Epstein.\n\n- Any document listing individuals without accompanying language, context, or credible reporting that connects those individuals to Epstein’s illegal activity.\n\nThe primary resolution sources for this market will be the released files themselves and a consensus of credible reporting.",
+    "category": null,
+    "endDate": "2025-12-31T00:00:00+00:00",
+    "volumeScore": 0.0,
+    "markets": [
+      {
+        "slug": "epstein-client-list-released-in-2025-372",
+        "question": "Epstein client list released in 2025?",
+        "description": "This market will resolve to “Yes” if files which were not previously public and which pertain to the illegal activities of Jeffrey Epstein are made public by December 31, 2025, 11:59 PM ET, and those files contain a list of individuals associated with Epstein in connection with his illegal activities, including but not limited to sex trafficking or related crimes. Otherwise, this market will resolve to “No.”\n\nTo qualify, the files must contain names in a context equivalent to what is commonly referred to as Epstein’s “client list”—that is, a document that explicitly identifies a list or set of individuals as being directly connected to, participating in, facilitating, funding, soliciting, or otherwise being implicated in Jeffrey Epstein’s illegal activities.\n\nA document may qualify even if it does not contain explicit incriminating language on its face, so long as credible reporting or accompanying official context confirms that the released document is an incriminating client list or functionally equivalent roster of individuals tied to Epstein’s illegal activity.\n\nThe following will not qualify:\n\n- Flight logs, passenger manifests, visitor logs, or transportation records which merely show individuals traveling with, meeting with, or visiting Epstein without any explicit or contextual tie to criminal activity.\n\n- Contact books, address lists, social calendars, guest lists, schedules, correspondence logs, or similar documents that include names solely due to social contact, proximity, acquaintance, or logistical interaction with Epstein.\n\n- Any document listing individuals without accompanying language, context, or credible reporting that connects those individuals to Epstein’s illegal activity.\n\nThe primary resolution sources for this market will be the released files themselves and a consensus of credible reporting.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.09,
+        "bestAsk": 0.1,
+        "liquidity": 11522.4514,
+        "volume24h": null,
+        "closed": false
+      }
+    ]
+  },
+  {
+    "slug": "senator-eichorn-guilty-of-soliciting-a-child",
+    "title": "Senator Eichorn guilty of soliciting a child?",
+    "description": "On March 17, sitting Minnesota State Senator Justin Eichorn was arrested for allegedly soliciting sex from a 16 year old. You can read more about that here: https://minnesotareformer.com/2025/03/18/gop-state-sen-justin-eichorn-arrested-for-suspicion-of-soliciting-sex-with-a-16-year-old-girl/\n\nThis market will resolve to \"Yes\" if Rojas is found guilty on any charge relating to soliciting a minor sexual activity in this case by February 28, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nIf Eichorn is never charged with soliciting a minor for sexual activity in this case, or otherwise all charges related to soliciting a minor for sexual activity in this case are dismissed, end due to a plea agreement without an admission of guilt, or if a mistrial is declared for the relevant charges, this market will resolve to \"No\".\n\nIf all solicitation of a minor charges dismissed at any point, this market will resolve to \"No\".\n\nThis market will resolve according to the initial judgment rendered in this case. Any appeals will have no bearing on the resolution of this market.\n\nThe primary resolution source will be an official judgement delivered by the ruling court; however, other credible reporting may be used.\n",
+    "category": null,
+    "endDate": "2025-12-31T12:00:00+00:00",
+    "volumeScore": 0.0,
+    "markets": [
+      {
+        "slug": "senator-eichorn-guilty-of-soliciting-a-child",
+        "question": "Senator Eichorn guilty of soliciting a child?",
+        "description": "On March 17, sitting Minnesota State Senator Justin Eichorn was arrested for allegedly soliciting sex from a 16 year old. You can read more about that here: https://minnesotareformer.com/2025/03/18/gop-state-sen-justin-eichorn-arrested-for-suspicion-of-soliciting-sex-with-a-16-year-old-girl/\n\nThis market will resolve to \"Yes\" if Rojas is found guilty on any charge relating to soliciting a minor sexual activity in this case by February 28, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nIf Eichorn is never charged with soliciting a minor for sexual activity in this case, or otherwise all charges related to soliciting a minor for sexual activity in this case are dismissed, end due to a plea agreement without an admission of guilt, or if a mistrial is declared for the relevant charges, this market will resolve to \"No\".\n\nIf all solicitation of a minor charges dismissed at any point, this market will resolve to \"No\".\n\nThis market will resolve according to the initial judgment rendered in this case. Any appeals will have no bearing on the resolution of this market.\n\nThe primary resolution source will be an official judgement delivered by the ruling court; however, other credible reporting may be used.\n",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.237,
+        "bestAsk": 0.975,
+        "liquidity": 59.75339,
+        "volume24h": null,
+        "closed": false
+      }
+    ]
+  },
+  {
+    "slug": "us-x-venezuela-military-engagement-by-october-31",
+    "title": "US x Venezuela military engagement by...?",
+    "description": "This market will resolve to \"Yes\" if there is a military engagement between the military forces of the United States of America and Venezuela between August 21, and October 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military engagement\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between US and Venezuelan military forces. Non-violent actions, such as warning shots, artillery fire into uninhabited areas, or missile launches that land in territorial waters or pass through airspace, will not qualify for a \"Yes\" resolution. Intentional ship ramming that results in significant damage to (e.g., a hole in the hull) or the sinking of a military ship by another will count toward a \"Yes\" resolution; however, minor damage (scrapes, dents) will not. Any U.S. military kinetic strike that impacts Venezuelan land territory will qualify for a “Yes” resolution.\n\nMissiles or drones which are intercepted and surface-to-air missile strikes will not be sufficient for a \"Yes\" resolution, regardless of whether they land on adversarial territory or cause damage.\n\nNote: the U.S. Coast Guard is a branch of the U.S. Armed Forces; Venezuela’s Milicia Nacional Bolivariana (militia) is a “special component” of the Venezuelan National Bolivarian Armed Forces (FANB); and Venezuela’s Coast Guard (Comando de Guardacostas) is a component of the Venezuelan Navy (Armada Bolivariana) and thus part of the FANB.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+    "category": null,
+    "endDate": "2026-03-31T00:00:00+00:00",
+    "volumeScore": 0.0,
+    "markets": [
+      {
+        "slug": "us-x-venezuela-military-engagement-by-december-31-391-819-722-945-174-285-817-971-353-859-836-598-255",
+        "question": "US x Venezuela military engagement by December 31?",
+        "description": "This market will resolve to \"Yes\" if there is a military engagement between the military forces of the United States of America and Venezuela between August 21, and December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military engagement\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between US and Venezuelan military forces. Non-violent actions, such as warning shots or missile launches that land in territorial waters or pass through airspace, will not qualify for a \"Yes\" resolution. Intentional ship ramming that results in significant damage to (e.g., a hole in the hull) or the sinking of a military ship by another will count toward a \"Yes\" resolution; however, minor damage (scrapes, dents) will not. \n\nAny U.S. military kinetic strike that impacts Venezuelan land territory will qualify for a “Yes” resolution.\n\nMissiles or drone strikes which are intercepted will not qualify regardless of whether they land on adversarial territory or cause damage. Similarly, surface-to-air missile strikes impacting adversarial territory will not qualify for a \"Yes\" resolution (although surface to air missiles fired at an adversarial military aircraft would qualify).\n\nNote: the U.S. Coast Guard is a branch of the U.S. Armed Forces; Venezuela’s Milicia Nacional Bolivariana (militia) is a “special component” of the Venezuelan National Bolivarian Armed Forces (FANB); and Venezuela’s Coast Guard (Comando de Guardacostas) is a component of the Venezuelan Navy (Armada Bolivariana) and thus part of the FANB.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.37,
+        "bestAsk": 0.39,
+        "liquidity": 151310.6848,
+        "volume24h": null,
+        "closed": false
+      },
+      {
+        "slug": "us-x-venezuela-military-engagement-by-november-30-216-397-226-467-735-374-192-441-421-482-389",
+        "question": "US x Venezuela military engagement by November 30?",
+        "description": "This market will resolve to \"Yes\" if there is a military engagement between the military forces of the United States of America and Venezuela between August 21, and November 30, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military engagement\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between US and Venezuelan military forces. Non-violent actions, such as warning shots or missile launches that land in territorial waters or pass through airspace, will not qualify for a \"Yes\" resolution. Intentional ship ramming that results in significant damage to (e.g., a hole in the hull) or the sinking of a military ship by another will count toward a \"Yes\" resolution; however, minor damage (scrapes, dents) will not. \n\nAny U.S. military kinetic strike that impacts Venezuelan land territory will qualify for a “Yes” resolution.\n\nMissiles or drone strikes which are intercepted will not qualify regardless of whether they land on adversarial territory or cause damage. Similarly, surface-to-air missile strikes impacting adversarial territory will not qualify for a \"Yes\" resolution (although surface to air missiles fired at an adversarial military aircraft would qualify).\n\nNote: the U.S. Coast Guard is a branch of the U.S. Armed Forces; Venezuela’s Milicia Nacional Bolivariana (militia) is a “special component” of the Venezuelan National Bolivarian Armed Forces (FANB); and Venezuela’s Coast Guard (Comando de Guardacostas) is a component of the Venezuelan Navy (Armada Bolivariana) and thus part of the FANB.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.06,
+        "bestAsk": 0.07,
+        "liquidity": 61833.0559,
+        "volume24h": null,
+        "closed": false
+      },
+      {
+        "slug": "us-x-venezuela-military-engagement-by-december-15-551-648-183",
+        "question": "US x Venezuela military engagement by December 15?",
+        "description": "This market will resolve to \"Yes\" if there is a military engagement between the military forces of the United States of America and Venezuela between August 21, and December 15, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military engagement\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between US and Venezuelan military forces. Non-violent actions, such as warning shots or missile launches that land in territorial waters or pass through airspace, will not qualify for a \"Yes\" resolution. Intentional ship ramming that results in significant damage to (e.g., a hole in the hull) or the sinking of a military ship by another will count toward a \"Yes\" resolution; however, minor damage (scrapes, dents) will not. \n\nAny U.S. military kinetic strike that impacts Venezuelan land territory will qualify for a “Yes” resolution.\n\nMissiles or drone strikes which are intercepted will not qualify regardless of whether they land on adversarial territory or cause damage. Similarly, surface-to-air missile strikes impacting adversarial territory will not qualify for a \"Yes\" resolution (although surface to air missiles fired at an adversarial military aircraft would qualify).\n\nNote: the U.S. Coast Guard is a branch of the U.S. Armed Forces; Venezuela’s Milicia Nacional Bolivariana (militia) is a “special component” of the Venezuelan National Bolivarian Armed Forces (FANB); and Venezuela’s Coast Guard (Comando de Guardacostas) is a component of the Venezuelan Navy (Armada Bolivariana) and thus part of the FANB.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.25,
+        "bestAsk": 0.27,
+        "liquidity": 7326.6252,
+        "volume24h": null,
+        "closed": false
+      },
+      {
+        "slug": "us-x-venezuela-military-engagement-by-november-26-745",
+        "question": "US x Venezuela military engagement by November 26?",
+        "description": "This market will resolve to \"Yes\" if there is a military engagement between the military forces of the United States of America and Venezuela between November 14, and November 26, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military engagement\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between US and Venezuelan military forces. Non-violent actions, such as warning shots or missile launches that land in territorial waters or pass through airspace, will not qualify for a \"Yes\" resolution. Intentional ship ramming that results in significant damage to (e.g., a hole in the hull) or the sinking of a military ship by another will count toward a \"Yes\" resolution; however, minor damage (scrapes, dents) will not. \n\nAny U.S. military kinetic strike that impacts Venezuelan land territory will qualify for a “Yes” resolution.\n\nMissiles or drone strikes which are intercepted will not qualify regardless of whether they land on adversarial territory or cause damage. Similarly, surface-to-air missile strikes impacting adversarial territory will not qualify for a \"Yes\" resolution (although surface to air missiles fired at an adversarial military aircraft would qualify).\n\nNote: the U.S. Coast Guard is a branch of the U.S. Armed Forces; Venezuela’s Milicia Nacional Bolivariana (militia) is a “special component” of the Venezuelan National Bolivarian Armed Forces (FANB); and Venezuela’s Coast Guard (Comando de Guardacostas) is a component of the Venezuelan Navy (Armada Bolivariana) and thus part of the FANB.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.001,
+        "bestAsk": 0.002,
+        "liquidity": 11715.89577,
+        "volume24h": null,
+        "closed": false
+      },
+      {
+        "slug": "us-x-venezuela-military-engagement-by-november-27-157",
+        "question": "US x Venezuela military engagement by November 27?",
+        "description": "This market will resolve to \"Yes\" if there is a military engagement between the military forces of the United States of America and Venezuela between November 14, and November 27, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military engagement\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between US and Venezuelan military forces. Non-violent actions, such as warning shots or missile launches that land in territorial waters or pass through airspace, will not qualify for a \"Yes\" resolution. Intentional ship ramming that results in significant damage to (e.g., a hole in the hull) or the sinking of a military ship by another will count toward a \"Yes\" resolution; however, minor damage (scrapes, dents) will not. \n\nAny U.S. military kinetic strike that impacts Venezuelan land territory will qualify for a “Yes” resolution.\n\nMissiles or drone strikes which are intercepted will not qualify regardless of whether they land on adversarial territory or cause damage. Similarly, surface-to-air missile strikes impacting adversarial territory will not qualify for a \"Yes\" resolution (although surface to air missiles fired at an adversarial military aircraft would qualify).\n\nNote: the U.S. Coast Guard is a branch of the U.S. Armed Forces; Venezuela’s Milicia Nacional Bolivariana (militia) is a “special component” of the Venezuelan National Bolivarian Armed Forces (FANB); and Venezuela’s Coast Guard (Comando de Guardacostas) is a component of the Venezuelan Navy (Armada Bolivariana) and thus part of the FANB.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.008,
+        "bestAsk": 0.01,
+        "liquidity": 8512.43401,
+        "volume24h": null,
+        "closed": false
+      },
+      {
+        "slug": "us-x-venezuela-military-engagement-by-march-31-2026-264-352-211-137-861",
+        "question": "US x Venezuela military engagement by March 31, 2026?",
+        "description": "This market will resolve to \"Yes\" if there is a military engagement between the military forces of the United States of America and Venezuela between November 4, 2025, and March 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military engagement\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between US and Venezuelan military forces. Non-violent actions, such as warning shots or missile launches that land in territorial waters or pass through airspace, will not qualify for a \"Yes\" resolution. Intentional ship ramming that results in significant damage to (e.g., a hole in the hull) or the sinking of a military ship by another will count toward a \"Yes\" resolution; however, minor damage (scrapes, dents) will not. \n\nAny U.S. military kinetic strike that impacts Venezuelan land territory will qualify for a “Yes” resolution.\n\nMissiles or drone strikes which are intercepted will not qualify regardless of whether they land on adversarial territory or cause damage. Similarly, surface-to-air missile strikes impacting adversarial territory will not qualify for a \"Yes\" resolution (although surface to air missiles fired at an adversarial military aircraft would qualify).\n\nNote: the U.S. Coast Guard is a branch of the U.S. Armed Forces; Venezuela’s Milicia Nacional Bolivariana (militia) is a “special component” of the Venezuelan National Bolivarian Armed Forces (FANB); and Venezuela’s Coast Guard (Comando de Guardacostas) is a component of the Venezuelan Navy (Armada Bolivariana) and thus part of the FANB.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "prices": null,
+        "mid": null,
+        "bestBid": 0.57,
+        "bestAsk": 0.6,
+        "liquidity": 9811.5071,
+        "volume24h": null,
+        "closed": false
+      }
+    ]
+  }
+]
